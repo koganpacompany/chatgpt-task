@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>ChatGPTが作ったタスク管理ツール</title>
+  </head>
+  <body>
+    <h1>ChatGPTが作ってしまったタスク管理ツール</h1>
+	<p>ChatGPTに「htmlでタスク管理ツール作りたいんだけどどうすればいいの？」と言ったら作ってしまったタスク管理ツールですw<br>正直作ってしまうとは想像していませんでした。</br>なので外見を少し改良してGithubに上げます。ご自由にお使いください。改造もおkです。<br>注意:タスクを入力してEnterを押すと文字が消えてしまうのでご注意ください。更新ボタンを押すとすべてが消えてしまうのでお気をつけて。</p>
+    <form>
+      <label for="task">タスク:</label>
+      <input type="text" id="task" name="task">
+      <button type="button" onclick="addTask()">追加</button>
+    </form>
+    <ul id="task-list">
+    </ul>
+    <script>
+      function addTask() {
+        var taskInput = document.getElementById("task");
+        var taskList = document.getElementById("task-list");
+        var taskText = taskInput.value;
+        if (taskText !== "") {
+          var taskItem = document.createElement("li");
+          var taskCheckbox = document.createElement("input");
+          taskCheckbox.type = "checkbox";
+          taskCheckbox.onchange = function() {
+            if (taskCheckbox.checked) {
+              taskItem.style.textDecoration = "line-through";
+            } else {
+              taskItem.style.textDecoration = "none";
+            }
+          };
+          var taskLabel = document.createElement("label");
+          taskLabel.innerHTML = taskText;
+          var deleteButton = document.createElement("button");
+          deleteButton.innerHTML = "削除";
+          deleteButton.onclick = function() {
+            taskList.removeChild(taskItem);
+          };
+          taskItem.appendChild(taskCheckbox);
+          taskItem.appendChild(taskLabel);
+          taskItem.appendChild(deleteButton);
+          taskList.appendChild(taskItem);
+          taskInput.value = "";
+        }
+      }
+    </script>
+  </body>
