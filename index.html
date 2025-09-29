@@ -1,116 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>リンク集</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chrome を使用するには認証が必要です</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Helvetica Neue", Arial; background:#fff; color:#222; text-align:center; padding:6vh 16px; }
+  .card { display:inline-block; text-align:left; border-radius:8px; padding:24px; box-shadow:0 6px 24px rgba(0,0,0,0.08); max-width:420px; width:100%; }
+  header { display:flex; align-items:center; gap:12px; }
+  header img { width:28px; height:28px; }
+  h1 { margin:8px 0 6px; font-size:18px; }
+  p { margin:6px 0 14px; color:#444; font-size:14px; }
+  button.auth {
+    display:inline-block;
+    background:#1a73e8; color:white; border:none; padding:12px 18px; border-radius:6px;
+    font-size:16px; cursor:pointer;
+  }
+  .prank {
+    display:none;
+    color:white;
+    font-size:28px;
+    padding:40px 20px;
+  }
+  footer { font-size:12px; color:#888; margin-top:18px; }
+</style>
 </head>
 <body>
+  <div class="card" id="card">
+    <header>
+      <img src="https://www.google.com/favicon.ico" alt="G">
+      <div>
+        <div style="font-size:12px; color:#666;">Google Chrome</div>
+        <h1>Chromeを使用するには認証が必要です</h1>
+      </div>
+    </header>
+    <p>続行するには下の「認証する」をタップして下さい。</p>
+    <div style="text-align:center;">
+      <button id="authBtn" class="auth">認証する</button>
+    </div>
+    <footer>Google LLC</footer>
+  </div>
+
+  <div id="prankScreen" class="prank" style="background:#d62828; margin:20px auto; max-width:420px; border-radius:8px;">
+    <div style="font-weight:700;">ドッキリ大成功！！！</div>
+    <div style="font-size:14px; margin-top:10px;">ネタバレ：これはジョークです！</div>
+  </div>
+
   <script>
-    window.onload = function() {
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV9WhLxQRmPLNloXIu0mXX3eREQHlTA4bAA1lfBMbJw7ryWgI0Zt-5OkPB&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8jcT_dTg4zjSaF7C7OdBNhrVtvLETRKHeKLNbVcsf-A&s=10");
-      window.open("https://erocomic.net/wp-content/uploads/2025/07/%E7%84%A1%E6%96%99%E3%82%A8%E3%83%AD%E6%BC%AB%E7%94%BB-1.jpg");
-      window.open("https://blog-imgs-81.fc2.com/e/r/o/erog/20151017_img_02_thum.jpg");
-      window.open("https://m.media-amazon.com/images/I/71qq0hV07OL.jpg");
+  // ======= サウンド設定（WebAudioでちょい強めに鳴らす） =======
+  let audioCtx;
+  let buffer;
+  async function setupAudio() {
+    try {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      // 簡単にビープ音を作るサンプル（ファイル不要）
+      const duration = 1.2; // 秒
+      const sampleRate = audioCtx.sampleRate;
+      const frameCount = sampleRate * duration;
+      const b = audioCtx.createBuffer(1, frameCount, sampleRate);
+      const data = b.getChannelData(0);
+      // 短いサイン波 + ノイズで派手めの効果音を合成
+      for (let i = 0; i < frameCount; i++) {
+        const t = i / sampleRate;
+        // 主音（複数周波数を重ねる）
+        data[i] = 0.9 * Math.sin(2 * Math.PI * 880 * t) * Math.exp(-2.5 * t)
+                  + 0.6 * Math.sin(2 * Math.PI * 440 * t) * Math.exp(-2.2 * t);
+        // ノイズアタック
+        data[i] += (Math.random() * 0.3 - 0.15) * Math.exp(-6 * t);
+      }
+      buffer = b;
+    } catch (e) {
+      console.error("Audio setup fail", e);
     }
+  }
+
+  // user gesture で AudioContext を resume させる必要あり（iOS対策）
+  async function ensureAudioReady() {
+    if (!audioCtx) await setupAudio();
+    if (audioCtx && audioCtx.state === 'suspended') {
+      try { await audioCtx.resume(); } catch(e){}
+    }
+  }
+
+  // 再生関数（ゲインを大きめに）
+  function playPrank() {
+    if (!audioCtx || !buffer) return;
+    const src = audioCtx.createBufferSource();
+    src.buffer = buffer;
+    const gain = audioCtx.createGain();
+    gain.gain.value = 2.0; // 0.0〜まで。注意：音量がかなり大きくなる可能性あり！
+    src.connect(gain).connect(audioCtx.destination);
+    src.start();
+  }
+
+  // クリック時の挙動
+  const btn = document.getElementById('authBtn');
+  btn.addEventListener('click', async (e) => {
+    // ここがユーザー操作なので audio のロック解除に使える！
+    await ensureAudioReady();
+
+    // 表示パスを書き換える（ドメインは変えられない）
+    // 例: /accounts/signin に見せかける
+    try {
+      history.pushState({}, "", "/accounts/signin");
+      document.title = "Google アカウントの認証";
+    } catch (err) {
+      // 無理なら無視
+    }
+
+    // すぐに音を鳴らす
+    playPrank();
+
+    // 視覚ドッキリに切り替え
+    const card = document.getElementById('card');
+    const prank = document.getElementById('prankScreen');
+    card.style.display = "none";
+    prank.style.display = "block";
+
+    // （任意）数秒後に元に戻す
+    setTimeout(() => {
+      prank.style.display = "none";
+      card.style.display = "block";
+      // 元のパスに戻す（任意）
+      try { history.replaceState({}, "", "/"); document.title = "Chrome を使用するには認証が必要です"; } catch(e){}
+    }, 4000);
+  });
+
+  // 事前ロード（ページロード時に音を生成しておく）
+  // iOSではユーザー操作前の音声生成は制限されるが、ここでバッファ作るだけはOK
+  setupAudio();
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
