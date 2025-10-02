@@ -2,20 +2,17 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>あなたは生徒です</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
     body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      height: 100vh;
+      margin: 0;
       background: #f8f9fa;
-      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      font-family: "Yu Gothic", sans-serif;
     }
     p {
       font-size: 10vmin;
@@ -26,12 +23,18 @@
       font-size: 20vmin;
       margin: 0;
       color: #0a4a8a;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
   <p>あなたは</p>
   <h1>ちんこです</h1>
+
+  <script>
+    // 見かけのURLを example.com/student に変える
+　　　history.pushState({}, "", "https://student.com");
+    // さらにドメインっぽくしたいなら
+    // history.pushState({}, "", "https://example.com/student");
+  </script>
 </body>
 </html>
